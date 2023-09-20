@@ -2,9 +2,9 @@
 
 A streamlined social media platform, taking inspiration from popular platforms like Instagram, but with a simplified touch. Developed using the MERN stack, the app offers essential features tailored to deliver a smooth user experience.
 
-![SocialSanjal logo or screenshot](client/public/assets/DarkMode.png) 
-![SocialSanjal logo or screenshot](client/public/assets/profileImage.png) 
-![SocialSanjal logo or screenshot](client/public/assets/post.png) 
+<img src="client/public/assets/DarkMode.png" alt="SocialSanjal HomePage" width="200" height="200"/>
+<img src="client/public/assets/profileImage.png" alt="SocialSanjal profileImage" width="200" height="200"/>
+<img src="client/public/assets/post.png" alt="post" width="200" height="200"/>
 
 
 ## Features
