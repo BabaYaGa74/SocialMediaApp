@@ -1,4 +1,3 @@
----
 # SocialSanjal
 
 A streamlined social media platform, taking inspiration from popular platforms like Instagram, but with a simplified touch. Developed using the MERN stack, the app offers essential features tailored to deliver a smooth user experience.
@@ -29,6 +28,7 @@ A streamlined social media platform, taking inspiration from popular platforms l
 
 - **Design & Responsiveness**:
   - Developed using the SCSS framework alongside React.
+  - A user-friendly dark theme for enhanced readability and reduced eye strain during nighttime browsing.
   - The current design is desktop-focused. Responsiveness enhancements are planned for future releases.
 
 ## Technologies Used
