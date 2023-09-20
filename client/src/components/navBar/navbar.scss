@@ -1,0 +1,121 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    border-bottom: 1px solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    z-index: 999;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      span {
+        font-weight: bold;
+        font-size: 20px;
+        color: themed("logo");
+      }
+      .homeButton:hover {
+        cursor: pointer;
+      }
+
+      .whiteThemeButton:hover {
+        cursor: pointer;
+        box-shadow: -2px -3px 28px 4px rgba(159, 159, 159, 0.32);
+      }
+      .darkThemeButton:hover {
+        cursor: pointer;
+        box-shadow: -2px -3px 28px 4px rgba(0, 0, 0, 0.32);
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid themed("border");
+        border-radius: 5px;
+        padding: 5px;
+
+        input {
+          border: none;
+          width: 500px;
+          background-color: transparent;
+          color: themed("textColor");
+
+          @include mobile {
+            display: none;
+          }
+
+          @include tablet {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      button {
+        background: transparent;
+        color: themed("textColor");
+        border: 1px solid themed("textColor");
+        cursor: pointer;
+      }
+      button:hover {
+        background: themed("bg");
+        box-shadow: -2px -3px 28px 4px rgba(0, 0, 0, 0.223);
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      .user {
+        cursor: pointer;
+
+        .link {
+          text-decoration: none;
+          color: inherit;
+          display: flex;
+          font-weight: 500;
+          align-items: center;
+          gap: 10px;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+    .wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

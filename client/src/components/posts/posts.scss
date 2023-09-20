@@ -1,0 +1,15 @@
+@import "../../style.scss";
+.posts {
+  @include themify($themes) {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 750px;
+    @include mobile {
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
+      width: 95%;
+    }
+  }
+}

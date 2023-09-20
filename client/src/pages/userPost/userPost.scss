@@ -1,0 +1,136 @@
+@import "../../style.scss";
+
+.postSection {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: themed("bgSoft");
+    height: 100vh;
+    .post {
+      -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+      -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+      box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+      border-radius: 20px;
+      margin-bottom: 100px;
+      border: 1px solid themed(textColor);
+      background-color: themed("bg");
+      color: themed("textColor");
+      width: 50%;
+      max-width: 50%;
+      @include mobile {
+        width: 90%;
+        max-width: 100%;
+      }
+      .container {
+        padding: 20px;
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .userInfo {
+            display: flex;
+            gap: 20px;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .details {
+              display: flex;
+              flex-direction: column;
+
+              .name {
+                font-weight: 500;
+              }
+
+              .date {
+                font-size: 12px;
+              }
+            }
+          }
+          .dropdown {
+            position: relative;
+            cursor: pointer;
+
+            .dropdown-content {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              gap: 5px;
+              background-color: themed(bg);
+              width: 80px;
+              border-radius: 10px;
+              padding-left: 2px;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              z-index: 1;
+
+              span {
+                color: themed(textColor);
+              }
+              span:hover {
+                background-color: themed(bgSoft);
+              }
+            }
+          }
+          .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 90px;
+            height: 40px;
+            border: 1px solid themed(textColor);
+            border-radius: 10px;
+            .saveIcon {
+              color: themed(textColor);
+            }
+            p {
+              color: themed(textColor);
+            }
+          }
+          .buttons:hover {
+            cursor: pointer;
+            .saveIcon {
+              color: themed(textColor);
+            }
+            background: #2273a5;
+            color: themed(textColor);
+          }
+        }
+
+        .content {
+          margin: 20px 0px;
+          max-height: fit-content;
+
+          .textInput {
+            margin-top: 15px;
+            padding: 10px;
+            width: 90%;
+            border: 1px solid themed("border");
+            background-color: transparent;
+            color: themed("textColor");
+          }
+
+          .fileInput {
+            margin-top: 20px;
+            padding: 7px;
+            cursor: pointer;
+          }
+
+          img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: scale-down;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../style.scss";
+
+.confirmation-card {
+  @include themify($themes) {
+    width: 300px;
+    border: 2px solid themed(textColor);
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: themed(bg);
+    border-radius: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &.confirm {
+          background-color: #f44336;
+          color: white;
+
+          &:hover {
+            background-color: darken(#f44336, 10%);
+          }
+        }
+
+        &.cancel {
+          background-color: #9e9e9e;
+          color: white;
+
+          &:hover {
+            background-color: darken(#9e9e9e, 10%);
+          }
+        }
+      }
+    }
+  }
+}

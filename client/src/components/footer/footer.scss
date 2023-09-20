@@ -1,0 +1,32 @@
+@import "../../style.scss";
+
+.social-media-footer {
+  @include themify($themes) {
+    background-color: themed(bg);
+    color: themed(textColor);
+    padding: 20px 0;
+    font-size: 14px;
+    text-align: center;
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 10px;
+
+      a {
+        color: themed(textColor);
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #007bff;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

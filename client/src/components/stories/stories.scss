@@ -1,0 +1,185 @@
+@import "../../style.scss";
+
+.stories {
+  @include themify($themes) {
+    display: flex;
+    gap: 10px;
+    height: 250px;
+    margin-bottom: 30px;
+
+    @include mobile {
+      height: 150px;
+      margin-bottom: 0;
+      justify-content: space-between;
+    }
+
+    @include tablet {
+      height: 150px;
+      gap: 20px;
+    }
+
+    .story {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      width: 150px;
+      cursor: pointer;
+
+      @include mobile {
+        flex: none;
+        max-width: 85px;
+        max-height: 90px;
+        border-radius: 50%;
+        flex: 1 0 50%;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      span {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: themed(textColor);
+        padding: 5px;
+        border-radius: 5px;
+        background-color: themed(bg);
+        border: 1px solid themed(textColor);
+        font-weight: 500;
+        @include mobile {
+          display: none;
+        }
+      }
+
+      label {
+        .item {
+          p {
+            position: absolute;
+            bottom: 45px;
+            left: 10px;
+            color: whitesmoke;
+            background-color: #5271ff;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              background-color: themed(bg);
+              color: themed(textColor);
+              border: 1px solid themed(textColor);
+            }
+          }
+        }
+      }
+
+      button {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: whitesmoke;
+        background-color: #5271ff;
+        border: none;
+        border-radius: 10px;
+        width: 120px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+
+        &:hover {
+          background-color: themed(bg);
+          color: themed(textColor);
+          border: 1px solid themed(textColor);
+        }
+      }
+    }
+    .arrowContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .arrowButtons {
+        background-color: themed(textColor);
+        color: themed(bg);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .storyViewer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      height: 450px;
+      width: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid themed(textColor);
+      border-radius: 20px;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+
+      @include mobile {
+        height: 90vh; // 90% of the viewport height
+        width: 90%;
+      }
+
+      img {
+        width: 90%;
+        height: 80%;
+        object-fit: contain;
+      }
+
+      .displayUsername {
+        margin-top: 15px; // space from the image
+
+        span {
+          color: themed(textColor);
+          font-size: 20px;
+          background: themed(bg);
+          padding: 5px 10px;
+          border-radius: 5px; // Optional for a rounded look
+        }
+      }
+      .deleteButton {
+        cursor: pointer;
+        background: black;
+        color: whitesmoke;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        bottom: 21px;
+        right: 135px;
+        padding: 3px;
+
+        &:hover {
+          color: rgb(230, 49, 49);
+        }
+      }
+    }
+  }
+}
